@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const phone = {
+      name: 'iPhone',
+      price: 99900,
+      inStock: true
+    }
+    console.log(phone);
+    console.log(phone.name);
+    console.log(phone['price']);
+
+    phone.inStock = false;
+
+    console.log(phone);
+
+    //ovde mora bracket notacija zato sto ce milsitia da je screen minus size
+    phone['screen-size'] = '6.1 inch';
+
+    delete phone.inStock;
+
+    console.log(phone);
+
+    const product = {
+      name: 'socks',
+      price: 690,
+      rating: {
+        stars: 4.5,
+        count: 87
+      }
+      
+      
+    }
+
+    console.log(product.rating.stars);
+
+    product.rating.count += 1;
+    console.log(product.rating.count);
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    const cart = {
+      quantity: 0,
+
+      addItem: function (){
+        this.quantity += 1;
+      },
+
+      reset: function (){
+        this.quantity = 0;
+      }
+      
+      
+      
+    }
+
+  cart.addItem();
+  console.log(cart);
+  cart.addItem();
+  console.log(cart);
+  cart.addItem();
+  cart.addItem();
+  cart.addItem();
+  cart.addItem();
+
+  console.log(cart);
+
+  cart.reset();
+
+  console.log(cart);
+  */
+     const cart = {
+      quantity: 0,
+
+      addItem: function (amount){
+        if(this.quantity  + amount > 10){
+          console.log('Korpa je puna');
+        } else {
+          this.quantity  += amount;
+        }
+        
+      },
+
+      reset: function (){
+        this.quantity = 0;
+      }
+      
+      
+    }
+    cart.addItem(11);
+
+    console.log(cart.quantity);
+    cart.addItem(3);
+    console.log(cart.quantity);
+
+    cart.addItem(5);
+    console.log(cart.quantity); 
+
+    cart.addItem(4);           
+    console.log(cart.quantity); 
+
+    cart.addItem(2);
+    console.log(cart.quantity)
+
+    const score = {
+      wins: 0,
+      losses: 0,
+      ties: 0,
+
+
+      updateScore: function (result){
+        if (result === 'win'){
+          this.wins += 1;
+        } else if (result === 'loss'){
+          this.losses += 1;
+        } else if (result === 'tie'){
+          this.ties += 1;
+        }
+      }
+    }
+    
+
+    console.log(score);
+
+    score.updateScore('win');
+    console.log(score);
+    score.updateScore('loss');
+    console.log(score);
+    score.updateScore('tie');
+    console.log(score);
+
+    console.log(`Wins: ${score.wins} , Losses: ${score.losses } Ties: ${score.ties}` );
+
+    
+
+    localStorage.setItem('ime', JSON.stringify(score));
+    
+    const loadedScore = JSON.parse(localStorage.getItem('ime'));
+
+    console.log(loadedScore.wins);
+    
+  </script>
+</body>
+</html>

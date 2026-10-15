@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     /*   const product = {
+          name: 'socks',
+          price: 690,
+          rating: {
+            stars: 4.5,
+            count: 87
+      }}
+
+
+     function formatPrice(product){
+      return ` $${(product['price'] / 100).toFixed(2)}`;
+     }
+
+     console.log(formatPrice(product));
+     console.log(formatPrice({name: 'test', price: 2000}))
+     */
+    /*
+      const product1 = {
+        name: 'phone',
+        price: 900
+      }
+
+      const product2 = {
+        name: 'phone',
+        price: 900
+      }
+      const product3 = {
+        name: 'phone',
+        price: 1000
+      }
+     function isSameProduct(product1, product2){
+       if (product1.name  === product2.name && product1.price === product2.price) {
+        return true;
+      } else {
+        return false;
+      }
+     }
+     console.log(isSameProduct(product1, product2))
+     console.log(isSameProduct(product1, product3))
+     console.log(isSameProduct(product2, product3));
+     */
+
+     const product = {
+      name: 'car',
+      price: 5000
+     }
+
+     function applyDiscount(product, percent){
+      let discount = '';
+      discount = product.price * percent / 100;
+      product.price = Math.round(product.price - discount);
+      return product;
+     }
+
+     console.log(applyDiscount(product, 20));
+  </script>
+</body>
+</html>
