@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Person {
+
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this.job = "";
+      }
+
+        getName = () => {
+          return this.name;
+        } ;
+
+
+         getAge = () => {
+          return this.age;
+        } ;
+
+        setJob = (job) => {
+          this.job = job
+        }
+        } 
+
+        class House {
+
+          constructor(adress, price, residents){
+            this.adress = adress;
+            this.price = price;
+            this.residents = residents;
+          }
+
+          getAddress = () => {
+            return this.adress
+          }
+
+          getPrice = () => {
+            return this.price
+          }
+
+          getResidents = () => {
+            return this.residents
+          };
+
+
+          addResident = (resident) => {
+            this.residents.push(resident);
+            
+          };
+        }
+        let Pedro = new Person("Pedro", 19)
+        let house = new House("Vrnjacka", 2030, []);
+        house.addResident(Pedro);
+
+        Pedro.setJob("developer");
+
+        console.log(house.getResidents());
+
+  </script>
+</body>
+</html>
